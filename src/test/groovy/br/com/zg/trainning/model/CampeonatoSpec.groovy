@@ -1,5 +1,6 @@
 package br.com.zg.trainning.model
 
+import br.com.zg.trainning.model.entity.Campeonato
 import spock.lang.Specification
 
 class CampeonatoSpec extends Specification {

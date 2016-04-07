@@ -1,5 +1,6 @@
 package br.com.zg.trainning.model
 
+import br.com.zg.trainning.model.entity.Time
 import spock.lang.Specification
 
 class TimeSpec extends Specification {
