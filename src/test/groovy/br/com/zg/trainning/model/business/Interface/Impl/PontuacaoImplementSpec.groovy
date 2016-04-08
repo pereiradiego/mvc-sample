@@ -19,7 +19,7 @@ class PontuacaoImplementTest extends Specification {
 				quantGolPro: quantGolPro,
 				quantGolContra: quantGolContra,
 		)
-		int pontuacao = pontuacao
+		int pontuacao = pontuacaot
 
 		expect:
 
@@ -33,7 +33,7 @@ class PontuacaoImplementTest extends Specification {
 		quantGolPro = 14
 		quantGolContra = 23
 
-		pontuacao = 34
+		pontuacaot = 34
 
 	}
 }
