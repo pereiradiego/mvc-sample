@@ -9,7 +9,6 @@ import br.com.zg.trainning.model.entity.Time
 class PontuacaoImplementTest extends Specification {
 	def "CalculaPontuacao"() {
 		given:
-		given:
 		Time time = new Time(
 				idTime: idTime,
 				nomeTime: nomeTime,
@@ -19,7 +18,7 @@ class PontuacaoImplementTest extends Specification {
 				quantGolPro: quantGolPro,
 				quantGolContra: quantGolContra,
 		)
-		int pontuacao = pontuacao
+		int pontuacao = pontuacaot
 
 		expect:
 
@@ -33,7 +32,7 @@ class PontuacaoImplementTest extends Specification {
 		quantGolPro = 14
 		quantGolContra = 23
 
-		pontuacao = 34
+		pontuacaot = 34
 
 	}
 }
