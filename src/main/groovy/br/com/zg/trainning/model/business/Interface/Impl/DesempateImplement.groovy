@@ -9,16 +9,21 @@ class DesempateImplement implements  Desempate{
 
 	List<Time> realizaDesempate(List<Time> times){
 
-		times.sort{it.quantVitoria}
-		times.sort{it.quantGolPro}
-		if(times.count() == 2){
-			//logica do confronto direto
+		times.sort { timeA, timeB ->
+			if(timeA.quantVitoria != timeB.quantVitoria){
+				timeA <=> timeB
+			}else if((timeA.quantGolPro-timeA.quantGolContra) != (timeB.quantGolPro-timeB.quantGolContra)){
+				timeA <=> timeB
+			}else if(times.count() == 2){
+				//Logica de confronto direto
+				//Aplica critérios de desempate
+			}else {
+				//Sorteio em caso de empate em todos os critérios anteriores
+				Collections.shuffle(timeA,timeB)
+			}
 		}
-		times.sort{it.quantGolPro}
-		times.sort{-it.quantGolContra}
 
 		return times
-
 	}
-
 }
+
