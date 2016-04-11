@@ -5,6 +5,6 @@ import br.com.zg.trainning.model.entity.Time
 /**
  * Created by diegoalves on 07/04/16.
  */
-interface Desempate {
+interface Classificacao {
 	List<Time> realizaDesempate(List<Time> times)
 }
