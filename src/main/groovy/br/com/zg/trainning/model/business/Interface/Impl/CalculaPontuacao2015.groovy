@@ -8,15 +8,15 @@ import br.com.zg.trainning.model.entity.Time
  */
 class CalculaPontuacao2015 implements CalculaPontuacao{
 
-	private int ponto_vitoria = 3
-	private int ponto_empate = 1
+	private final int PONTO_POR_VITORIA = 3
+	private final int PONTO_EMPATE = 1
 	@Override
 	int calculaPontuacaoTotal(Time time) {
 
 		int pontuacao
 
-		pontuacao += time.quantVitoria * ponto_vitoria
-		pontuacao += time.quantEmpate * ponto_empate
+		pontuacao += time.quantVitoria * PONTO_POR_VITORIA
+		pontuacao += time.quantEmpate * PONTO_EMPATE
 
 		return pontuacao
 	}
