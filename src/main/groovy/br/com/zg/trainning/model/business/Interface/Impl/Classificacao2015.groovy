@@ -7,11 +7,9 @@ import br.com.zg.trainning.model.entity.Time
  * Created by diegoalves on 07/04/16.
  */
 class Classificacao2015 implements  Classificacao{
-
-	//Map<Integer, Time> realizaDesempate_(List<Time> times)
+	CalculaPontuacao2015 calculaPontuacao2015 = new CalculaPontuacao2015()
 
 	List<Time> realizaDesempate(List<Time> times){
-		CalculaPontuacao2015 calculaPontuacao2015 = new CalculaPontuacao2015()
 
 		times = times.sort { timeB, timeA ->
 
@@ -30,6 +28,24 @@ class Classificacao2015 implements  Classificacao{
 		}
 
 		return times
+	}
+
+	List<Time> realizaClassificacao(List<Time> times){
+		times = realizaDesempate(times)
+
+		return  times
+	}
+
+	Time obtemCampeao(List<Time> times){
+		times = realizaClassificacao(times)
+
+		return times.first()
+	}
+
+	Time obtemLanterna(List<Time> times){
+		times = realizaClassificacao(times)
+
+		return times.last()
 	}
 }
 
