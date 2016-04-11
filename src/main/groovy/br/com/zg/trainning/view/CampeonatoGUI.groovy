@@ -14,6 +14,7 @@ class CampeonatoGUI {
 	static List<Time> timesParticipantes =[]
 	static List<Campeonato> campeonatoList = []
 
+
 	private static void main(String[] args){
 		cadastrarCampeonato()
 		cadastrarTimes()

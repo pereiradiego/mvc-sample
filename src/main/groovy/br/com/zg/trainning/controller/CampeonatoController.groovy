@@ -12,4 +12,5 @@ class CampeonatoController {
 	List<Campeonato> salvarCampeonato(List<Campeonato> campeonatoList, Campeonato campeonato){
 		campeonatoBusiness.salvar(campeonatoList, campeonato)
 	}
+
 }

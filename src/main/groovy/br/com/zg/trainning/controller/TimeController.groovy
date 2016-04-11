@@ -12,4 +12,5 @@ class TimeController {
 	List<Time> salvarTime(List<Time> times, Time time){
 		timeBusiness.salvar(times, time)
 	}
+
 }
