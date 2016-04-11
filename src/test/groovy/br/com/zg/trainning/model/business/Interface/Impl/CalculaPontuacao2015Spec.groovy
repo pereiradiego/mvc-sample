@@ -8,7 +8,7 @@ import br.com.zg.trainning.model.business.Interface.CalculaPontuacao
  * Created by diegoalves on 11/04/16.
  */
 class CalculaPontuacao2015Spec extends Specification {
-	def "CalculaPontuacaoTotal"() {
+	def "calculaPontuacaoTotal"() {
 		setup:
 		Time time = new Time()
 		CalculaPontuacao2015 calculaPontuacao = new CalculaPontuacao2015()
@@ -23,7 +23,7 @@ class CalculaPontuacao2015Spec extends Specification {
 		time.quantGolPro = 14
 		time.quantGolContra = 23
 
-		pontuacao = calculaPontuacao.CalculaPontuacaoTotal(time)
+		pontuacao = calculaPontuacao.calculaPontuacaoTotal(time)
 
 
 		then:

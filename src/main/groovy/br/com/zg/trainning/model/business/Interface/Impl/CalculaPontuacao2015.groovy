@@ -11,7 +11,7 @@ class CalculaPontuacao2015 implements CalculaPontuacao{
 	private int ponto_vitoria = 3
 	private int ponto_empate = 1
 	@Override
-	int CalculaPontuacaoTotal(Time time) {
+	int calculaPontuacaoTotal(Time time) {
 
 		int pontuacao
 
