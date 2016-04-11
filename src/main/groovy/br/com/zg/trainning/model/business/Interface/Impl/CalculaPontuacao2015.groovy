@@ -12,6 +12,7 @@ class CalculaPontuacao2015 implements CalculaPontuacao{
 	private final int PONTO_EMPATE = 1
 	@Override
 	int calculaPontuacaoTotal(Time time) {
+
 		int pontuacao
 
 		pontuacao += time.quantVitoria * PONTO_POR_VITORIA
