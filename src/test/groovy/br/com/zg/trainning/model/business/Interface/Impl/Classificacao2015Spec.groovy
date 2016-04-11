@@ -15,17 +15,16 @@ class Classificacao2015Spec extends Specification {
 		times += new Time(idTime: 2, nomeTime: 'time 2', quantVitoria: 12, quantEmpate: 4, quantDerrota: 5, quantGolPro: 28, quantGolContra: 15)
 		times += new Time(idTime: 1, nomeTime: 'time 1', quantVitoria: 10, quantEmpate: 6, quantDerrota: 5, quantGolPro: 25, quantGolContra: 18)
 		times += new Time(idTime: 3, nomeTime: 'time 3', quantVitoria: 10, quantEmpate: 6, quantDerrota: 5, quantGolPro: 18, quantGolContra: 16)
+		times += new Time(idTime: 4, nomeTime: 'time 4', quantVitoria: 11, quantEmpate: 3, quantDerrota: 5, quantGolPro: 20, quantGolContra: 18)
 
 		when:
 		times = classificacao2015.realizaDesempate(times)
 
 		then:
-		times.each {
-			println it.idTime
-		}
 		times[0].idTime == 2
-		times[1].idTime == 1
-		times[2].idTime == 3
+		times[1].idTime == 4
+		times[2].idTime == 1
+		times[3].idTime == 3
 
 	}
 }
