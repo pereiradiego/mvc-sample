@@ -8,4 +8,6 @@ import br.com.zg.trainning.model.entity.Time
 interface Classificacao {
 	List<Time> realizaDesempate(List<Time> times)
 	List<Time> realizaClassificacao(List<Time> times)
+	Time obtemCampeao(List<Time> timeList)
+	Time obtemLanterna(List<Time> timeList)
 }

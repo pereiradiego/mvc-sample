@@ -8,14 +8,17 @@ import br.com.zg.trainning.model.entity.*
  * Created by diegoalves on 11/04/16.
  */
 class CampeonatoBusiness {
-	private CampeonatoDAO campeonatoDAO = new CampeonatoDAOImpl()
+	private campeonatoDAO
 
-	List<Campeonato> salvar(List<Campeonato> campeonatoList){
-		campeonatoDAO.salvar(campeonatoList)
+	CampeonatoBusiness(CampeonatoDAO campeonatoDAO) {
+		this.campeonatoDAO = campeonatoDAO
 	}
 
-	Campeonato salvarTimes(Campeonato campeonato, List<Time> times){
-		campeonatoDAO.salvarTimes(campeonato, times)
+	List<Campeonato> salvar(List<Campeonato> listaDeCampeonatos, Campeonato campeonato) {
+		campeonatoDAO.salvar(listaDeCampeonatos, campeonato)
 	}
 
+	Campeonato salvarTimes(Campeonato campeonato, Time time) {
+		campeonatoDAO.adicionaTime(campeonato, time)
+	}
 }
