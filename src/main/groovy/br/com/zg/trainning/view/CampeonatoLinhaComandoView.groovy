@@ -33,4 +33,9 @@ class CampeonatoLinhaComandoView extends EntradaDadosView implements CampeonatoV
 	void exibeLanterna(Time time) {
 		println "O lanterna é o $time.nomeTime!"
 	}
+	void exibeTabela(List<Time> times) {
+		times.eachWithIndex { Time entry, int i ->
+			println("${i+1} ${entry.nomeTime}")
+		}
+	}
 }

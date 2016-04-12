@@ -1,6 +1,7 @@
 package br.com.zg.trainning.controller
 
 import br.com.zg.trainning.model.business.Interface.Impl.Classificacao2015
+import br.com.zg.trainning.model.entity.Campeonato
 import br.com.zg.trainning.model.entity.Time
 
 /**
@@ -15,5 +16,9 @@ class ClassificacaoController {
 
 	Time obtemLanterna(List<Time> timeList){
 		classificacao2015.obtemLanterna(timeList)
+	}
+
+	List<Time> obtemTabelaClassificacao(Campeonato campeonato){
+		return classificacao2015.realizaClassificacao(campeonato.times)
 	}
 }

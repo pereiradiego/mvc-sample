@@ -13,6 +13,7 @@ class CampeonatoController {
 
 	public static final int SABER_CAMPEAO = 1
 	public static final int SABER_LANTERNA = 2
+	public static final int EXIBIR_TABELA = 3
 	public static final int ENCERRAR = 0
 
 	private CampeonatoBusiness campeonatoBusiness
@@ -54,6 +55,12 @@ class CampeonatoController {
 			case SABER_LANTERNA:
 				Time lanterna = classificacao.obtemLanterna(campeonato.times)
 				campeonatoView.exibeLanterna(lanterna)
+
+				pergunteOperacao(campeonato)
+				break
+			case EXIBIR_TABELA:
+				List<Time> times = classificacao.realizaClassificacao(campeonato)
+				campeonatoView.exibeTabela(times)
 
 				pergunteOperacao(campeonato)
 				break

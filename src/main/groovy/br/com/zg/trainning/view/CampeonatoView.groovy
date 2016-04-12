@@ -12,4 +12,5 @@ interface CampeonatoView {
 
 	void exibeCampeao(Time time)
 	void exibeLanterna(Time time)
+	void exibeTabela(List<Time> time)
 }
